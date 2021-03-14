@@ -86,7 +86,7 @@
             </li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="login" href="#" role="button">
               <span class="fa fa-sign-in"></span> Login</a
             >
           </span>
@@ -212,16 +212,21 @@
                 </div>
               </div>
               <div class="form-row">
-                <button
-                  type="button"
-                  class="btn btn-secondary btn-sm ml-auto"
-                  data-dismiss="modal"
-                >
-                  Cancel
-                </button>
-                <button type="submit" class="btn btn-primary btn-sm ml-1">
-                  Sign in
-                </button>
+                <div class="col col-sm-9 offset-sm-8">
+                    <button
+                    type="button"
+                    class="btn btn-secondary btn-sm ml-auto"
+                    data-dismiss="modal"
+                  >
+                    Cancel
+                  </button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">
+                    Sign in
+                  </button>
+  
+
+                </div>
+
               </div>
             </form>
           </div>
@@ -250,12 +255,10 @@
             />
           </div>
           <div class="col-12 col-sm-3 align-self-center">
-            <a
+            <a id="reserveTable"
               role="button"
               href="#reservetable"
               class="btn btn-warning"
-              data-toggle="modal"
-              data-target="#reserveTableModal"
               ><h4>&nbsp;&nbsp; Reserve table&nbsp;&nbsp;</h4>
             </a>
           </div>
@@ -520,6 +523,18 @@
       crossorigin="anonymous"
     ></script>
 
+    <script>
+    $(document).ready(function(){
+      $('#login').click(function(){
+        $('#loginModal').modal('show');
+      })
+      $('#reserveTable').click(function(){
+        $('#reserveTableModal').modal('show');
+      })
+      
+    });
+
+    </script>
     <!-- <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
